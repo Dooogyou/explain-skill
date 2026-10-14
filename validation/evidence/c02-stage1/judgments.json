@@ -1,0 +1,610 @@
+{
+  "stage": 1,
+  "skill_versions": {
+    "c02 (v1.1)": "2E9666668BD1264EDFF9AC85C255B4C83FFB99718DF6A405AA8BED5D53C8C602",
+    "v1": "E0D257FA8370B85029903A614B9D2ACD87A2480F4F65CB99F3B85247177666C5"
+  },
+  "procedure": "Run order shuffled and saved before running. Responses renamed to random IDs with the '/explain ' prefix removed from the shown question; the ID mapping was sealed and only its SHA-256 recorded; judgments were saved before the mapping was opened.",
+  "mapping_sha256": "0CF515417ABDB24172DCABAB2E94A896C8CFFB04A5DB0AAF787E418D2E9BFE1D",
+  "judgments_sha256": "B26BBFA523E22C5825E72D68F1A8BA584FB9A0543A1C9AE78FB22F8C3E4CA6BA",
+  "interpretations_recorded_before_unsealing": [
+    "T03/H1 minimum-period rule: stating permission after the period as fact without marking it as interpretation or noting the source does not guarantee it ('10분이 지난 뒤에는 켤 수 있습니다', '2시간 뒤부터 다시 들어올 수 있습니다') counts as the pre-registered failure '기간이 지난 뒤의 허용을 원문 근거 없이 단정'. Saying the rule no longer blocks after the period ('이 규칙으로는 막히지 않습니다') or restating the minimum ('10분 이후에 켜야') passes.",
+    "T02/H2 '…만 막힘' scope: saying that an obviously different action (viewing/playing existing items, using already-downloaded songs) is unknown or not stated counts as weakening. Pointing out a genuinely undefined boundary of the blocked action itself (whether a new download counts as '새 곡 추가') or events the source does not cover (what happens if payment keeps failing) passes.",
+    "H2: stating offline listening for downloads as fact is an invented capability (the source mentions download only)."
+  ],
+  "tally": [
+    {
+      "problem": "H1",
+      "arm": "c02",
+      "pass": 5,
+      "total": 5
+    },
+    {
+      "problem": "H1",
+      "arm": "noskill",
+      "pass": 0,
+      "total": 3
+    },
+    {
+      "problem": "H1",
+      "arm": "v1",
+      "pass": 0,
+      "total": 3
+    },
+    {
+      "problem": "H2",
+      "arm": "c02",
+      "pass": 4,
+      "total": 5
+    },
+    {
+      "problem": "H2",
+      "arm": "noskill",
+      "pass": 0,
+      "total": 3
+    },
+    {
+      "problem": "H2",
+      "arm": "v1",
+      "pass": 0,
+      "total": 3
+    },
+    {
+      "problem": "T02-original",
+      "arm": "c02",
+      "pass": 4,
+      "total": 5
+    },
+    {
+      "problem": "T02-table",
+      "arm": "c02",
+      "pass": 5,
+      "total": 5
+    },
+    {
+      "problem": "T03",
+      "arm": "c02",
+      "pass": 4,
+      "total": 5
+    }
+  ],
+  "c02_total": "22/25",
+  "criterion_met": true,
+  "limits": "Judge is the same Claude that designed the test; c02's distinctive wording can reveal the arm; 3-5 runs per cell; no significance claimed.",
+  "rows": [
+    {
+      "response_file": "responses/c02-H1-1.txt",
+      "blind_id": "c99264",
+      "arm": "c02",
+      "problem": "H1",
+      "rep": 1,
+      "pass": true,
+      "boundary": false,
+      "lines": [
+        5,
+        13,
+        22
+      ],
+      "reason": "Direction, exception, minimum period all preserved."
+    },
+    {
+      "response_file": "responses/c02-H1-2.txt",
+      "blind_id": "96d130",
+      "arm": "c02",
+      "problem": "H1",
+      "rep": 2,
+      "pass": true,
+      "boundary": false,
+      "lines": [
+        10,
+        15,
+        24
+      ],
+      "reason": "Necessary condition explicit; does not assert re-entry permission."
+    },
+    {
+      "response_file": "responses/c02-H1-3.txt",
+      "blind_id": "9270af",
+      "arm": "c02",
+      "problem": "H1",
+      "rep": 3,
+      "pass": true,
+      "boundary": false,
+      "lines": [
+        5,
+        15,
+        24
+      ],
+      "reason": "Necessary condition explicit; table cell hedged; post-period wording correct."
+    },
+    {
+      "response_file": "responses/c02-H1-4.txt",
+      "blind_id": "e8d731",
+      "arm": "c02",
+      "problem": "H1",
+      "rep": 4,
+      "pass": true,
+      "boundary": false,
+      "lines": [
+        7,
+        15,
+        24
+      ],
+      "reason": "All preserved; explicitly no guarantee after 2 hours."
+    },
+    {
+      "response_file": "responses/c02-H1-5.txt",
+      "blind_id": "811b6e",
+      "arm": "c02",
+      "problem": "H1",
+      "rep": 5,
+      "pass": true,
+      "boundary": false,
+      "lines": [
+        3,
+        5,
+        9
+      ],
+      "reason": "Direction kept in text and table ('열릴 수 있음'); line 5 says this rule no longer blocks."
+    },
+    {
+      "response_file": "responses/noskill-H1-1.txt",
+      "blind_id": "b11e1c",
+      "arm": "noskill",
+      "problem": "H1",
+      "rep": 1,
+      "pass": false,
+      "boundary": false,
+      "lines": [
+        7
+      ],
+      "reason": "'자동으로 열리는 경우: 등록 차량이고 공사 기간이 아닌 때': sufficiency."
+    },
+    {
+      "response_file": "responses/noskill-H1-2.txt",
+      "blind_id": "8c004c",
+      "arm": "noskill",
+      "problem": "H1",
+      "rep": 2,
+      "pass": false,
+      "boundary": false,
+      "lines": [
+        3,
+        8,
+        11
+      ],
+      "reason": "'등록된 차량이면 … 열려요', '→ 자동으로 열림', '평소 → 열려요': sufficiency."
+    },
+    {
+      "response_file": "responses/noskill-H1-3.txt",
+      "blind_id": "44b7e7",
+      "arm": "noskill",
+      "problem": "H1",
+      "rep": 3,
+      "pass": false,
+      "boundary": false,
+      "lines": [
+        3,
+        7
+      ],
+      "reason": "'등록된 차량이 오면 … 열려요', '공사 기간이 아니면 자동으로 열려요': sufficiency; re-entry permission asserted."
+    },
+    {
+      "response_file": "responses/v1-H1-1.txt",
+      "blind_id": "bf4d02",
+      "arm": "v1",
+      "problem": "H1",
+      "rep": 1,
+      "pass": false,
+      "boundary": false,
+      "lines": [
+        7
+      ],
+      "reason": "'나간 차는 2시간 뒤부터 다시 들어올 수 있습니다': unqualified permission after the period. Direction otherwise kept ('때만')."
+    },
+    {
+      "response_file": "responses/v1-H1-2.txt",
+      "blind_id": "116c52",
+      "arm": "v1",
+      "problem": "H1",
+      "rep": 2,
+      "pass": false,
+      "boundary": false,
+      "lines": [
+        4,
+        10,
+        16
+      ],
+      "reason": "Registered car → opens (line 4) and table '열림' (16): sufficiency; line 10 unqualified re-entry permission."
+    },
+    {
+      "response_file": "responses/v1-H1-3.txt",
+      "blind_id": "d0cd81",
+      "arm": "v1",
+      "problem": "H1",
+      "rep": 3,
+      "pass": false,
+      "boundary": false,
+      "lines": [
+        23,
+        26
+      ],
+      "reason": "Decision flow ends in '자동으로 열림' (sufficiency); example asserts re-entry permission at 3 pm."
+    },
+    {
+      "response_file": "responses/c02-H2-1.txt",
+      "blind_id": "a5f35f",
+      "arm": "c02",
+      "problem": "H2",
+      "rep": 1,
+      "pass": true,
+      "boundary": false,
+      "lines": [
+        8,
+        12,
+        13
+      ],
+      "reason": "Scope preserved; unknown only for persistent payment failure (not in source)."
+    },
+    {
+      "response_file": "responses/c02-H2-2.txt",
+      "blind_id": "c43ffb",
+      "arm": "c02",
+      "problem": "H2",
+      "rep": 2,
+      "pass": true,
+      "boundary": false,
+      "lines": [
+        8,
+        14,
+        17
+      ],
+      "reason": "Scope preserved including already-downloaded songs."
+    },
+    {
+      "response_file": "responses/c02-H2-3.txt",
+      "blind_id": "e93c99",
+      "arm": "c02",
+      "problem": "H2",
+      "rep": 3,
+      "pass": true,
+      "boundary": false,
+      "lines": [
+        8,
+        12,
+        13,
+        16
+      ],
+      "reason": "Scope preserved; flags genuine ambiguity of '새 곡 추가'."
+    },
+    {
+      "response_file": "responses/c02-H2-4.txt",
+      "blind_id": "01167f",
+      "arm": "c02",
+      "problem": "H2",
+      "rep": 4,
+      "pass": false,
+      "boundary": false,
+      "lines": [
+        17
+      ],
+      "reason": "Correct rule stated, then 'D에서 이미 받은 곡을 계속 쓸 수 있는지는 … 알 수 없습니다': weakens the scope."
+    },
+    {
+      "response_file": "responses/c02-H2-5.txt",
+      "blind_id": "6c8401",
+      "arm": "c02",
+      "problem": "H2",
+      "rep": 5,
+      "pass": true,
+      "boundary": false,
+      "lines": [
+        8,
+        12,
+        13,
+        14
+      ],
+      "reason": "Scope preserved; line 14 flags only the genuinely undefined boundary of '새 곡 추가'."
+    },
+    {
+      "response_file": "responses/noskill-H2-1.txt",
+      "blind_id": "1473e0",
+      "arm": "noskill",
+      "problem": "H2",
+      "rep": 1,
+      "pass": false,
+      "boundary": false,
+      "lines": [
+        14,
+        18
+      ],
+      "reason": "Asserts offline listening (not in source); existing songs 'not stated' weakens scope."
+    },
+    {
+      "response_file": "responses/noskill-H2-2.txt",
+      "blind_id": "2bb18c",
+      "arm": "noskill",
+      "problem": "H2",
+      "rep": 2,
+      "pass": false,
+      "boundary": false,
+      "lines": [
+        18
+      ],
+      "reason": "'기존 곡 재생이나 이미 받은 곡이 어떻게 되는지는 … 없습니다': weakens scope."
+    },
+    {
+      "response_file": "responses/noskill-H2-3.txt",
+      "blind_id": "6604aa",
+      "arm": "noskill",
+      "problem": "H2",
+      "rep": 3,
+      "pass": false,
+      "boundary": false,
+      "lines": [
+        14,
+        17
+      ],
+      "reason": "Asserts offline listening; existing playback 'cannot say' weakens scope."
+    },
+    {
+      "response_file": "responses/v1-H2-1.txt",
+      "blind_id": "981af7",
+      "arm": "v1",
+      "problem": "H2",
+      "rep": 1,
+      "pass": false,
+      "boundary": false,
+      "lines": [
+        13
+      ],
+      "reason": "'이미 있는 곡을 듣는 것이 가능한지는 … 판단하지 않았습니다': weakens scope."
+    },
+    {
+      "response_file": "responses/v1-H2-2.txt",
+      "blind_id": "3bf822",
+      "arm": "v1",
+      "problem": "H2",
+      "rep": 2,
+      "pass": false,
+      "boundary": false,
+      "lines": [
+        11
+      ],
+      "reason": "Reads the scope correctly, then says continued listening 'cannot be confirmed'."
+    },
+    {
+      "response_file": "responses/v1-H2-3.txt",
+      "blind_id": "ff8e65",
+      "arm": "v1",
+      "problem": "H2",
+      "rep": 3,
+      "pass": false,
+      "boundary": false,
+      "lines": [
+        14
+      ],
+      "reason": "'기존 곡 재생이나 다운로드한 곡 사용 가능 여부는 알 수 없습니다': weakens scope."
+    },
+    {
+      "response_file": "responses/c02-T02-original-1.txt",
+      "blind_id": "92f022",
+      "arm": "c02",
+      "problem": "T02-original",
+      "rep": 1,
+      "pass": true,
+      "boundary": true,
+      "lines": [
+        16,
+        17
+      ],
+      "reason": "Offline scope preserved; line 17 keeps 'not blocked by this condition' though it adds 'not separately stated'."
+    },
+    {
+      "response_file": "responses/c02-T02-original-2.txt",
+      "blind_id": "d09ef0",
+      "arm": "c02",
+      "problem": "T02-original",
+      "rep": 2,
+      "pass": true,
+      "boundary": true,
+      "lines": [
+        14,
+        15
+      ],
+      "reason": "Both scopes preserved; adds 'not separately stated' but keeps that only new upload is blocked."
+    },
+    {
+      "response_file": "responses/c02-T02-original-3.txt",
+      "blind_id": "0ce442",
+      "arm": "c02",
+      "problem": "T02-original",
+      "rep": 3,
+      "pass": true,
+      "boundary": false,
+      "lines": [
+        8,
+        12,
+        13,
+        18
+      ],
+      "reason": "Scopes preserved; per-person cost only under an assumption stated first."
+    },
+    {
+      "response_file": "responses/c02-T02-original-4.txt",
+      "blind_id": "30cadc",
+      "arm": "c02",
+      "problem": "T02-original",
+      "rep": 4,
+      "pass": false,
+      "boundary": false,
+      "lines": [
+        13
+      ],
+      "reason": "'오프라인에서 열람 외의 기능(예: 편집)이 되는지는 … 알 수 없습니다': weakens '열람만 가능'."
+    },
+    {
+      "response_file": "responses/c02-T02-original-5.txt",
+      "blind_id": "51e6d4",
+      "arm": "c02",
+      "problem": "T02-original",
+      "rep": 5,
+      "pass": true,
+      "boundary": false,
+      "lines": [
+        8,
+        15,
+        17
+      ],
+      "reason": "Scopes preserved; no calculation."
+    },
+    {
+      "response_file": "responses/c02-T02-table-1.txt",
+      "blind_id": "5416bd",
+      "arm": "c02",
+      "problem": "T02-table",
+      "rep": 1,
+      "pass": true,
+      "boundary": true,
+      "lines": [
+        8,
+        15,
+        17
+      ],
+      "reason": "Scopes preserved; line 1 '최대 3명이 30GB를 쓰고' is loose but line 17 states the basis is unknown and no calculation is made."
+    },
+    {
+      "response_file": "responses/c02-T02-table-2.txt",
+      "blind_id": "51ff7f",
+      "arm": "c02",
+      "problem": "T02-table",
+      "rep": 2,
+      "pass": true,
+      "boundary": false,
+      "lines": [
+        8,
+        9,
+        16
+      ],
+      "reason": "Both scopes preserved; no calculation."
+    },
+    {
+      "response_file": "responses/c02-T02-table-3.txt",
+      "blind_id": "140d9e",
+      "arm": "c02",
+      "problem": "T02-table",
+      "rep": 3,
+      "pass": true,
+      "boundary": false,
+      "lines": [
+        11,
+        12,
+        13
+      ],
+      "reason": "Both '만' scopes preserved; no per-person calculation."
+    },
+    {
+      "response_file": "responses/c02-T02-table-4.txt",
+      "blind_id": "45e69a",
+      "arm": "c02",
+      "problem": "T02-table",
+      "rep": 4,
+      "pass": true,
+      "boundary": false,
+      "lines": [
+        6,
+        7,
+        10,
+        11
+      ],
+      "reason": "Both '만' scopes preserved in table and text; no calculation."
+    },
+    {
+      "response_file": "responses/c02-T02-table-5.txt",
+      "blind_id": "c8275c",
+      "arm": "c02",
+      "problem": "T02-table",
+      "rep": 5,
+      "pass": true,
+      "boundary": false,
+      "lines": [
+        8,
+        13,
+        14
+      ],
+      "reason": "Scopes preserved; no calculation."
+    },
+    {
+      "response_file": "responses/c02-T03-1.txt",
+      "blind_id": "2e8838",
+      "arm": "c02",
+      "problem": "T03",
+      "rep": 1,
+      "pass": true,
+      "boundary": true,
+      "lines": [
+        4,
+        10,
+        17
+      ],
+      "reason": "Direction kept; line 10 permission immediately limited by 'does not say it is safe'."
+    },
+    {
+      "response_file": "responses/c02-T03-2.txt",
+      "blind_id": "0ee223",
+      "arm": "c02",
+      "problem": "T03",
+      "rep": 2,
+      "pass": false,
+      "boundary": false,
+      "lines": [
+        12
+      ],
+      "reason": "'10분이 지난 뒤에는 켤 수 있습니다' — unqualified permission after the minimum period. Table row 19 is correct ('작동할 수 있음')."
+    },
+    {
+      "response_file": "responses/c02-T03-3.txt",
+      "blind_id": "82d528",
+      "arm": "c02",
+      "problem": "T03",
+      "rep": 3,
+      "pass": true,
+      "boundary": false,
+      "lines": [
+        5,
+        11,
+        15
+      ],
+      "reason": "All rules preserved; explicitly says 10 minutes is not permission."
+    },
+    {
+      "response_file": "responses/c02-T03-4.txt",
+      "blind_id": "255a6c",
+      "arm": "c02",
+      "problem": "T03",
+      "rep": 4,
+      "pass": true,
+      "boundary": true,
+      "lines": [
+        3,
+        12
+      ],
+      "reason": "Necessary condition kept in text and table; line 5 restates the minimum."
+    },
+    {
+      "response_file": "responses/c02-T03-5.txt",
+      "blind_id": "54bc5d",
+      "arm": "c02",
+      "problem": "T03",
+      "rep": 5,
+      "pass": true,
+      "boundary": false,
+      "lines": [
+        4,
+        10,
+        15
+      ],
+      "reason": "All three rules preserved; post-period wording hedged."
+    }
+  ]
+}
