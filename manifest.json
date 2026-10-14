@@ -2,7 +2,7 @@
   "package": "explain-v1-public-review",
   "prepared_on": "2026-10-13",
   "updated_on": "2026-10-14",
-  "status": "prepared_locally_not_published",
+  "status": "published",
   "license_status": "MIT",
   "installable_version": "v1.1",
   "source_skill_sha256": "2E9666668BD1264EDFF9AC85C255B4C83FFB99718DF6A405AA8BED5D53C8C602",
@@ -409,5 +409,12 @@
     "diff": "validation/v1-to-v1.1.diff",
     "stage1": "c02 22/25 (each problem >= 4/5); holdouts c02 9/10, v1 0/6, no-skill 0/6",
     "stage2": "regression criteria met (14 runs; 6 usage-limit rejections retried once)"
+  },
+  "publication": {
+    "repository": "https://github.com/Dooogyou/explain-skill",
+    "branch": "main",
+    "first_published_on": "2026-10-14",
+    "first_commit": "8346b84a3d7ad0f2cdecca31f72786284ddbc885",
+    "note": "The repository root contains exactly the files of this bundle. The first commit carried the same payload with status 'prepared_locally_not_published'; this manifest update records the publication."
   }
 }
